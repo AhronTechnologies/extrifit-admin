@@ -35,7 +35,7 @@ const RegionOverview = ({ id }: Props) => {
       return
     }
 
-    if (!selectedRegion && regions) {
+    if (!selectedRegion && regions?.length) {
       navigate(`/a/settings/regions/${regions[0].id}`, {
         replace: true,
       })

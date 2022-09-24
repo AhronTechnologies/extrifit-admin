@@ -64,7 +64,7 @@ const Edit = ({ id }: EditProps) => {
     <div className="pb-5xlarge">
       <BackButton
         path="/a/products"
-        label="Back to Products"
+        label="Zpátky na produkty"
         className="mb-xsmall"
       />
       <div className="grid grid-cols-12 gap-x-base">

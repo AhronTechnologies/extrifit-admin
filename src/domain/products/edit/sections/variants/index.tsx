@@ -43,17 +43,17 @@ const VariantsSection = ({ product }: Props) => {
 
   const actions: ActionType[] = [
     {
-      label: "Add Variant",
+      label: "Přidat variantu",
       onClick: toggleAddVariant,
       icon: <PlusIcon size="20" />,
     },
     {
-      label: "Edit Variants",
+      label: "Upravit varianty",
       onClick: toggleEditVariants,
       icon: <EditIcon size="20" />,
     },
     {
-      label: "Edit Options",
+      label: "Upravit typy variant",
       onClick: toggleOptions,
       icon: <GearIcon size="20" />,
     },
@@ -73,7 +73,7 @@ const VariantsSection = ({ product }: Props) => {
     // @ts-ignore
     setVariantToEdit({ base: { ...variant, options: [] }, isDuplicate: true })
   }
-
+  console.log(product);
   return (
     <OptionsProvider product={product}>
       <Section title="Variants" actions={actions}>

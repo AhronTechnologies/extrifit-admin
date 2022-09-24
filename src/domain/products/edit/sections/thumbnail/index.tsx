@@ -40,7 +40,7 @@ const TumbnailSection = ({ product }: Props) => {
   return (
     <>
       <Section
-        title="Thumbnail"
+        title="Náhledový obrázek"
         customActions={
           <div className="flex items-center gap-x-xsmall">
             <Button
@@ -49,7 +49,7 @@ const TumbnailSection = ({ product }: Props) => {
               type="button"
               onClick={toggle}
             >
-              {product.thumbnail ? "Edit" : "Upload"}
+              {product.thumbnail ? "Upravit" : "Nahrát"}
             </Button>
             {product.thumbnail && (
               <TwoStepDelete onDelete={handleDelete} deleting={updating} />

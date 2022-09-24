@@ -48,7 +48,6 @@ const SettingsIndex = () => {
         description={"Manage shipping profiles"}
         icon={<TruckIcon />}
         to={`/a/settings/shipping-profiles`}
-        disabled={true}
       />
       <SettingsCard
         heading={"Return Reasons"}

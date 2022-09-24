@@ -151,7 +151,7 @@ const CollectionProductTable: React.FC<CollectionProductTableProps> = ({
       <Table
         enableSearch
         handleSearch={handleSearch}
-        searchPlaceholder="Search Products"
+        searchPlaceholder="Vyhledat produkt"
         filteringOptions={filteringOptions}
         {...getTableProps()}
         className="h-full"
@@ -180,7 +180,7 @@ const CollectionProductTable: React.FC<CollectionProductTableProps> = ({
         limit={limit}
         offset={offset}
         pageSize={offset + rows.length}
-        title="Products"
+        title="Produkty"
         currentPage={pageIndex + 1}
         pageCount={pageCount}
         nextPage={handleNext}

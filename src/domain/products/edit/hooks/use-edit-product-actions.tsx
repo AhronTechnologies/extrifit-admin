@@ -29,12 +29,12 @@ const useEditProductActions = (productId: string) => {
   const onDelete = async () => {
     const shouldDelete = await dialog({
       heading: "Delete Product",
-      text: "Are you sure you want to delete this product",
+      text: "Opravdu chcete smazat tento produkt?",
     })
     if (shouldDelete) {
       deleteProduct.mutate(undefined, {
         onSuccess: () => {
-          notification("Success", "Product deleted successfully", "success")
+          notification("Úspěch", "Produkt byl úspěšně smazán", "success")
           navigate("/a/products/")
         },
         onError: (err) => {
@@ -47,11 +47,11 @@ const useEditProductActions = (productId: string) => {
   const onAddVariant = (
     payload: AdminPostProductsProductVariantsReq,
     onSuccess: () => void,
-    successMessage = "Variant was created successfully"
+    successMessage = "Varianta byla úspěšně vytvořena"
   ) => {
     addVariant.mutate(payload, {
       onSuccess: () => {
-        notification("Success", successMessage, "success")
+        notification("Úspěch", successMessage, "success")
         getProduct.refetch()
         onSuccess()
       },
@@ -65,14 +65,14 @@ const useEditProductActions = (productId: string) => {
     id: string,
     payload: Partial<AdminPostProductsProductVariantsVariantReq>,
     onSuccess: () => void,
-    successMessage = "Variant was updated successfully"
+    successMessage = "Varianta byla úspěšně upravena"
   ) => {
     updateVariant.mutate(
       // @ts-ignore - TODO fix type on request
       { variant_id: id, ...payload },
       {
         onSuccess: () => {
-          notification("Success", successMessage, "success")
+          notification("Úspěch", successMessage, "success")
           getProduct.refetch()
           onSuccess()
         },
@@ -86,11 +86,11 @@ const useEditProductActions = (productId: string) => {
   const onDeleteVariant = (
     variantId: string,
     onSuccess?: () => void,
-    successMessage = "Variant was succesfully deleted"
+    successMessage = "Varianta byla úspěšně smazaná"
   ) => {
     deleteVariant.mutate(variantId, {
       onSuccess: () => {
-        notification("Success", successMessage, "success")
+        notification("Úspěch", successMessage, "success")
         getProduct.refetch()
         if (onSuccess) {
           onSuccess()
@@ -105,14 +105,14 @@ const useEditProductActions = (productId: string) => {
   const onUpdate = (
     payload: Partial<AdminPostProductsProductReq>,
     onSuccess: () => void,
-    successMessage = "Product was successfully updated"
+    successMessage = "Produkt byl úspěšně upraven"
   ) => {
     updateProduct.mutate(
       // @ts-ignore TODO fix images being required
       payload,
       {
         onSuccess: () => {
-          notification("Success", successMessage, "success")
+          notification("Úspěch", successMessage, "success")
           onSuccess()
         },
         onError: (err) => {

@@ -75,12 +75,12 @@ const UserTable: React.FC<UserTableProps> = ({
         color={"inherit"}
         actions={[
           {
-            label: "Edit User",
+            label: "Upravit uživatele",
             onClick: () => setSelectedUser(user),
             icon: <EditIcon size={20} />,
           },
           {
-            label: "Remove User",
+            label: "Odstranit uživatele",
             variant: "danger",
             onClick: () => {
               setDeleteUser(true)
@@ -109,7 +109,7 @@ const UserTable: React.FC<UserTableProps> = ({
         key={`invite-${index}`}
         actions={[
           {
-            label: "Resend Invitation",
+            label: "Znovu odeslat pozvánku",
             onClick: () => {
               Medusa.invites
                 .resend(invite.id)
@@ -125,7 +125,7 @@ const UserTable: React.FC<UserTableProps> = ({
             icon: <RefreshIcon size={20} />,
           },
           {
-            label: "Copy invite link",
+            label: "Zkopírovat link pozvánky",
             disabled: isLoading,
             onClick: () => {
               const link_template =
@@ -142,7 +142,7 @@ const UserTable: React.FC<UserTableProps> = ({
             icon: <ClipboardCopyIcon size={20} />,
           },
           {
-            label: "Remove Invitation",
+            label: "Odstranit pozvnáku",
             variant: "danger",
             onClick: () => {
               setSelectedInvite(invite)
@@ -160,9 +160,9 @@ const UserTable: React.FC<UserTableProps> = ({
         <Table.Cell></Table.Cell>
         <Table.Cell>
           {new Date(invite?.expires_at) < new Date() ? (
-            <StatusIndicator title={"Expired"} variant={"danger"} />
+            <StatusIndicator title={"Vypršelo"} variant={"danger"} />
           ) : (
-            <StatusIndicator title={"Pending"} variant={"success"} />
+            <StatusIndicator title={"Čekání"} variant={"success"} />
           )}
         </Table.Cell>
       </Table.Row>
@@ -171,15 +171,15 @@ const UserTable: React.FC<UserTableProps> = ({
 
   const filteringOptions = [
     {
-      title: "Team permissions",
+      title: "Role",
       options: [
         {
-          title: "All",
+          title: "Všechny",
           count: elements.length,
           onClick: () => setShownElements(elements),
         },
         {
-          title: "Member",
+          title: "Uživatel",
           count: elements.filter(
             (e) => e.entityType === "user" && e.entity.role === "member"
           ).length,
@@ -203,7 +203,7 @@ const UserTable: React.FC<UserTableProps> = ({
             ),
         },
         {
-          title: "No team permissions",
+          title: "Žádná práva",
           count: elements.filter((e) => e.entityType === "invite").length,
           onClick: () =>
             setShownElements(elements.filter((e) => e.entityType === "invite")),
@@ -214,12 +214,12 @@ const UserTable: React.FC<UserTableProps> = ({
       title: "Status",
       options: [
         {
-          title: "All",
+          title: "Vše",
           count: elements.length,
           onClick: () => setShownElements(elements),
         },
         {
-          title: "Active",
+          title: "Aktivní",
           count: elements.filter((e) => e.entityType === "user").length,
           onClick: () =>
             setShownElements(elements.filter((e) => e.entityType === "user")),
@@ -281,9 +281,9 @@ const UserTable: React.FC<UserTableProps> = ({
       >
         <Table.Head>
           <Table.HeadRow>
-            <Table.HeadCell className="w-72">Name</Table.HeadCell>
+            <Table.HeadCell className="w-72">Jméno</Table.HeadCell>
             <Table.HeadCell className="w-80">Email</Table.HeadCell>
-            <Table.HeadCell className="w-72">Team permissions</Table.HeadCell>
+            <Table.HeadCell className="w-72">Role</Table.HeadCell>
             <Table.HeadCell>Status</Table.HeadCell>
           </Table.HeadRow>
         </Table.Head>
@@ -292,11 +292,11 @@ const UserTable: React.FC<UserTableProps> = ({
       {selectedUser &&
         (deleteUser ? (
           <DeletePrompt
-            text={"Are you sure you want to remove this user?"}
-            heading={"Remove user"}
+            text={"Opravdu chcete odstranit tohoto uživatele?"}
+            heading={"Odstranit uživatele"}
             onDelete={() =>
               Medusa.users.delete(selectedUser.id).then(() => {
-                notification("Success", "User has been removed", "success")
+                notification("Success", "Uživatel byl odstraněn", "success")
                 triggerRefetch()
               })
             }
@@ -311,11 +311,11 @@ const UserTable: React.FC<UserTableProps> = ({
         ))}
       {selectedInvite && (
         <DeletePrompt
-          text={"Are you sure you want to remove this invite?"}
-          heading={"Remove invite"}
+          text={"Opravdu chcete smazat tuto pozvánku?"}
+          heading={"Smazat pozvánku"}
           onDelete={() =>
             Medusa.invites.delete(selectedInvite.id).then(() => {
-              notification("Success", "Invitiation has been removed", "success")
+              notification("Success", "Pozvánka byla smazaná", "success")
               triggerRefetch()
             })
           }

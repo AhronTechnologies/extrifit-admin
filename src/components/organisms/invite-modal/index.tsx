@@ -54,7 +54,7 @@ const InviteModal: React.FC<InviteModalProps> = ({ handleClose }) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Modal.Body>
           <Modal.Header handleClose={handleClose}>
-            <span className="inter-xlarge-semibold">Invite Users</span>
+            <span className="inter-xlarge-semibold">Pozvat uživatele</span>
           </Modal.Header>
           <Modal.Content>
             <div className="flex flex-col gap-y-base">
@@ -90,7 +90,7 @@ const InviteModal: React.FC<InviteModalProps> = ({ handleClose }) => {
                 type="button"
                 onClick={handleClose}
               >
-                Cancel
+                Zrušit
               </Button>
               <Button
                 loading={isLoading}
@@ -98,7 +98,7 @@ const InviteModal: React.FC<InviteModalProps> = ({ handleClose }) => {
                 className="w-32 text-small justify-center"
                 variant="primary"
               >
-                Invite
+                Pozvat
               </Button>
             </div>
           </Modal.Footer>

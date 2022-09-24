@@ -14,14 +14,14 @@ const MediaSection = ({ product }: Props) => {
 
   const actions: ActionType[] = [
     {
-      label: "Edit Media",
+      label: "Upravit obrázky",
       onClick: toggle,
     },
   ]
 
   return (
     <>
-      <Section title="Media" actions={actions}>
+      <Section title="Obrázky" actions={actions}>
         {product.images && product.images.length > 0 && (
           <div className="grid grid-cols-3 gap-xsmall mt-base">
             {product.images.map((image, index) => {
@@ -32,7 +32,7 @@ const MediaSection = ({ product }: Props) => {
                 >
                   <img
                     src={image.url}
-                    alt={`Image ${index + 1}`}
+                    alt={`Obrázek ${index + 1}`}
                     className="object-contain rounded-rounded max-w-full max-h-full"
                   />
                 </div>

@@ -65,7 +65,7 @@ const Overview = (_props: RouteComponentProps) => {
               onClick={() => openImportModal()}
             >
               <UploadIcon size={20} />
-              Import Products
+              Importovat produkty
             </Button>
             <Button
               variant="secondary"
@@ -73,7 +73,7 @@ const Overview = (_props: RouteComponentProps) => {
               onClick={() => openExportModal()}
             >
               <ExportIcon size={20} />
-              Export Products
+              Exportovat produkty
             </Button>
             <Button
               variant="secondary"
@@ -81,7 +81,7 @@ const Overview = (_props: RouteComponentProps) => {
               onClick={openProductCreate}
             >
               <PlusIcon size={20} />
-              New Product
+              Nový produkt
             </Button>
           </div>
         )

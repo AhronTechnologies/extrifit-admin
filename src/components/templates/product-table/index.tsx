@@ -231,7 +231,7 @@ const ProductTable: React.FC<ProductTableProps> = () => {
           limit={limit}
           offset={offs}
           pageSize={offs + rows.length}
-          title="Products"
+          title="Produkty"
           currentPage={pageIndex + 1}
           pageCount={pageCount}
           nextPage={handleNext}

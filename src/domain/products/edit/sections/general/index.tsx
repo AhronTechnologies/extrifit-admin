@@ -37,12 +37,12 @@ const GeneralSection = ({ product }: Props) => {
 
   const actions: ActionType[] = [
     {
-      label: "Edit General Information",
+      label: "Upravit informace",
       onClick: toggleInfo,
       icon: <EditIcon size={20} />,
     },
     {
-      label: "Delete",
+      label: "Smazat produkt",
       onClick: onDelete,
       variant: "danger",
       icon: <TrashIcon size={20} />,
@@ -66,7 +66,7 @@ const GeneralSection = ({ product }: Props) => {
         status={
           <StatusSelector
             isDraft={product?.status === "draft"}
-            activeState="Published"
+            activeState="Publikováno"
             draftState="Draft"
             onChange={() => onStatusChange(product.status)}
           />
@@ -110,7 +110,7 @@ const Detail = ({ title, value }: DetailProps) => {
 const ProductDetails = ({ product }: Props) => {
   return (
     <div className="flex flex-col gap-y-3 mt-8">
-      <h2 className="inter-base-semibold">Details</h2>
+      <h2 className="inter-base-semibold">Detaily</h2>
       <Detail title="Subtitle" value={product.subtitle} />
       <Detail title="Handle" value={product.handle} />
       <Detail title="Type" value={product.type?.value} />
