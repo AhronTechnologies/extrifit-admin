@@ -47,6 +47,7 @@ const GeneralModal = ({ product, open, onClose }: Props) => {
   }
 
   const onSubmit = handleSubmit((data) => {
+    console.log(data);
     onUpdate(
       {
         title: data.general.title,

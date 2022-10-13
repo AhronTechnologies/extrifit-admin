@@ -33,7 +33,7 @@ const useOrderTableColums = () => {
         Cell: ({ cell: { value }, index }) => (
           <Table.Cell
             key={index}
-            className="text-grey-90 group-hover:text-violet-60 min-w-[100px] pl-2"
+            className="text-grey-90 group-hover:text-orange-60 min-w-[100px] pl-2"
           >{`#${value}`}</Table.Cell>
         ),
       },

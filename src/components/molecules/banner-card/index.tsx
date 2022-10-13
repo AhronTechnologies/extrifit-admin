@@ -53,7 +53,7 @@ const Description: React.FC<BannerCardDescriptionProps> = ({
       </p>
       {cta && (
         <button
-          className="text-violet-60 inter-small-semibold mt-base"
+          className="text-orange-60 inter-small-semibold mt-base"
           onClick={cta.onClick}
         >
           {cta.label}

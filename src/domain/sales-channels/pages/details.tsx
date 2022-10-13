@@ -42,12 +42,12 @@ function ListIndicator(props: ListIndicatorProps) {
       className={clsx(
         "flex justify-center items-center flex-shrink-0 w-[18px] h-[18px] bg-white border rounded-circle",
         {
-          "border-2 border-violet-60": isActive,
+          "border-2 border-orange-60": isActive,
         }
       )}
     >
       {isActive && (
-        <div className="w-[10px] h-[10px] bg-violet-60 rounded-circle" />
+        <div className="w-[10px] h-[10px] bg-orange-60 rounded-circle" />
       )}
     </div>
   )
@@ -90,7 +90,7 @@ function SalesChannelTile(props: SalesChannelTileProps) {
       className={clsx(
         "mb-2 p-4 cursor-pointer rounded-lg border flex justify-between h-[83px]",
         {
-          "border-2 border-violet-60": isSelected,
+          "border-2 border-orange-60": isSelected,
         }
       )}
     >
@@ -175,7 +175,7 @@ function SalesChannelsHeader(props: SalesChannelsHeaderProps) {
             value={filterText}
             onChange={(e) => setFilterText(e.target.value)}
             placeholder="Search by title or description"
-            className="bg-inherit outline-none outline-0 w-full remove-number-spinner leading-base text-grey-90 font-normal caret-violet-60 placeholder-grey-40"
+            className="bg-inherit outline-none outline-0 w-full remove-number-spinner leading-base text-grey-90 font-normal caret-orange-60 placeholder-grey-40"
             onBlur={() => setShowFilter(!!filterText)}
             autoComplete="off"
           />

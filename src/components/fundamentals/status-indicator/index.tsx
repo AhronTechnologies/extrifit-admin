@@ -16,7 +16,7 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({
     "bg-teal-50": variant === "success",
     "bg-rose-40": variant === "danger",
     "bg-yellow-50": variant === "warning",
-    "bg-violet-60": variant === "primary",
+    "bg-orange-60": variant === "primary",
     "bg-emerald-40": variant === "active",
     "bg-grey-40": variant === "default",
   })

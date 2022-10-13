@@ -175,7 +175,7 @@ const TagInput: React.FC<TagInputProps> = ({
       >
         <div
           className={clsx(
-            "h-auto min-h-[40px] bg-grey-5 shadow-border focus-within:outline-4 focus-within:outline focus-within:outline-violet-60/10 transition-colors focus-within:shadow-focus-border rounded-rounded flex items-center px-3 box-border",
+            "h-auto min-h-[40px] bg-grey-5 shadow-border focus-within:outline-4 focus-within:outline focus-within:outline-orange-60/10 transition-colors focus-within:shadow-focus-border rounded-rounded flex items-center px-3 box-border",
             {
               "shadow-error-border focus-within:shadow-error-border focus-within:outline-rose-60/10": invalid,
             }

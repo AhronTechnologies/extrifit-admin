@@ -10,6 +10,7 @@ export type GeneralFormType = {
   handle: string
   material: string | null
   description: string | null
+  longDescription: string | null
 }
 
 type Props = {

@@ -39,7 +39,7 @@ const Control = <
           "control--menu-is-open": menuIsOpen,
         },
         clsx(
-          "flex p-0 overflow-hidden rounded-rounded border border-gray-20 bg-grey-5 focus-within:shadow-cta transition-colors focus-within:border-violet-60 box-border pl-small",
+          "flex p-0 overflow-hidden rounded-rounded border border-gray-20 bg-grey-5 focus-within:shadow-cta transition-colors focus-within:border-orange-60 box-border pl-small",
           {
             "h-xlarge": size === "sm",
             "h-10": size === "md" || !size,

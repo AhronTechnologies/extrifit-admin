@@ -58,7 +58,7 @@ const ShippingOption: React.FC<ShippingOptionProps> = ({
       <div>
         <button
           onClick={onEdit}
-          className="inter-small-semibold text-violet-60"
+          className="inter-small-semibold text-orange-60"
         >
           Edit
         </button>

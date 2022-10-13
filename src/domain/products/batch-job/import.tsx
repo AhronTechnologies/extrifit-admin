@@ -62,7 +62,6 @@ function ImportProducts(props: ImportProductsProps) {
   const isUploaded = !!fileKey
   const isPreprocessed = !!batchJob?.result
   const hasError = batchJob?.status === "failed"
-
   const progress = isPreprocessed
     ? batchJob!.result.advancement_count / batchJob!.result.count
     : undefined
@@ -72,13 +71,14 @@ function ImportProducts(props: ImportProductsProps) {
     : isPreprocessed
     ? undefined
     : isUploaded
-    ? "Preprocessing..."
+    ? "Zpracování..."
     : "Uploading..."
 
   /**
    * Confirm job on submit.
    */
   const onSubmit = async () => {
+    console.log("upload file")
     await confirmBatchJob()
     notification(
       "Success",
@@ -92,6 +92,7 @@ function ImportProducts(props: ImportProductsProps) {
    * Upload file and use returned file key to create a batch job.
    */
   const processUpload = async (file: File) => {
+    console.log("processing")
     try {
       const res = await uploadFile(file as any)
       const _fileKey = res.uploads[0].key
@@ -102,7 +103,7 @@ function ImportProducts(props: ImportProductsProps) {
         context: { fileKey: _fileKey },
         type: "product-import",
       })
-
+      console.log(batchJob.batch_job.id);
       setBatchJobId(batchJob.batch_job.id)
     } catch (e) {
       notification("Error", "Import failed.", "error")
@@ -150,6 +151,7 @@ function ImportProducts(props: ImportProductsProps) {
    * Cleanup file if batch job isn't confirmed.
    */
   const onClose = () => {
+    console.log(batchJob?.status);
     props.handleClose()
     if (
       !["confirmed", "completed", "canceled", "failed"].includes(

@@ -10,7 +10,7 @@ function Switch(props: RadixSwitch.SwitchProps) {
     <RadixSwitch.Root
       {...props}
       className={clsx(
-        "w-8 h-[18px] rounded-full transition-bg bg-gray-300 radix-state-checked:bg-violet-60"
+        "w-8 h-[18px] rounded-full transition-bg bg-gray-300 radix-state-checked:bg-orange-60"
       )}
       asChild
     >

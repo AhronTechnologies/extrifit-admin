@@ -280,7 +280,7 @@ const OrderDetails = ({ id }: OrderDetailProps) => {
                 customHeader={
                   <Tooltip side="top" content={"Copy ID"}>
                     <button
-                      className="inter-xlarge-semibold text-grey-90 active:text-violet-90 cursor-pointer gap-x-2 flex items-center"
+                      className="inter-xlarge-semibold text-grey-90 active:text-orange-90 cursor-pointer gap-x-2 flex items-center"
                       onClick={handleCopy}
                     >
                       #{order.display_id} <ClipboardCopyIcon size={16} />
@@ -307,7 +307,7 @@ const OrderDetails = ({ id }: OrderDetailProps) => {
                       Email
                     </div>
                     <button
-                      className="text-grey-90 active:text-violet-90 cursor-pointer gap-x-1 flex items-center"
+                      className="text-grey-90 active:text-orange-90 cursor-pointer gap-x-1 flex items-center"
                       onClick={handleCopyEmail}
                     >
                       {order.email}

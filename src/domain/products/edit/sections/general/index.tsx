@@ -75,6 +75,9 @@ const GeneralSection = ({ product }: Props) => {
         <p className="inter-base-regular text-grey-50 mt-2">
           {product.description}
         </p>
+        <p className="inter-base-regular text-grey-50 mt-2">
+          {product.longDescription}
+        </p>
         <ProductTags product={product} />
         <ProductDetails product={product} />
         <ProductSalesChannels product={product} />

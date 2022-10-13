@@ -62,7 +62,7 @@ const NoteInput: React.FC<NoteInputProps> = ({ onSubmit }) => {
           />
         </div>
         <button
-          className="text-grey-30 hover:text-violet-60"
+          className="text-grey-30 hover:text-orange-60"
           type="button"
           onClick={handleSubmit}
         >

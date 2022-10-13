@@ -166,10 +166,10 @@ const SteppedModal: React.FC<SteppedProps> = ({
                           "w-2 h-2 rounded-full mr-3",
                           {
                             "bg-grey-20": i > context.currentStep,
-                            "bg-violet-60": context.currentStep >= i,
+                            "bg-orange-60": context.currentStep >= i,
                           },
                           {
-                            "outline-4 outline outline-violet-20":
+                            "outline-4 outline outline-orange-20":
                               context.currentStep === i,
                           }
                         )}

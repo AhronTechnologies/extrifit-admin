@@ -14,7 +14,7 @@ const useGiftCardTableColums = () => {
         Cell: ({ cell: { value }, index }) => (
           <Table.Cell
             key={index}
-            className="text-grey-90 group-hover:text-violet-60 w-[20%] pl-2"
+            className="text-grey-90 group-hover:text-orange-60 w-[20%] pl-2"
           >
             {value}
           </Table.Cell>
@@ -26,7 +26,7 @@ const useGiftCardTableColums = () => {
         Cell: ({ row, cell: { value }, index }) => (
           <Table.Cell
             key={index}
-            className="text-grey-90 group-hover:text-violet-60 w-[10%] pl-2"
+            className="text-grey-90 group-hover:text-orange-60 w-[10%] pl-2"
           >
             {value ? (
              row.original.order?.display_id

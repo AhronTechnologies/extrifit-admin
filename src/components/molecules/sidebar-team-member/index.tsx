@@ -7,7 +7,7 @@ type SidebarTeamMemberProps = {
 }
 
 const SidebarTeamMember: React.FC<SidebarTeamMemberProps> = ({
-  color = "bg-violet-60",
+  color = "bg-orange-60",
   user,
 }: SidebarTeamMemberProps) => {
   const fullName =

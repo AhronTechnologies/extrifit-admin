@@ -29,7 +29,7 @@ const NumberScroller: React.FC<NumberScrollerProps> = ({
             className={clsx(
               "w-[40px] h-[40px] last:mb-4 rounded inter-base-regular hover:bg-grey-20",
               {
-                "bg-violet-60 hover:bg-violet-50 text-grey-0 inter-base-semibold":
+                "bg-orange-60 hover:bg-orange-50 text-grey-0 inter-base-semibold":
                   n === selected,
               }
             )}

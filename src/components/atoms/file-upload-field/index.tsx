@@ -14,7 +14,7 @@ type FileUploadFieldProps = {
 const defaultText = (
   <span>
     Drop your images here, or{" "}
-    <span className="text-violet-60">click to browse</span>
+    <span className="text-orange-60">click to browse</span>
   </span>
 )
 
@@ -77,7 +77,7 @@ const FileUploadField: React.FC<FileUploadFieldProps> = ({
       onDrop={handleFileDrop}
       onDragOver={(e) => e.preventDefault()}
       className={clsx(
-        "flex flex-col select-none inter-base-regular text-grey-50 cursor-pointer items-center justify-center w-full h-full rounded-rounded border-2 border-dashed border-grey-20 transition-colors hover:border-violet-60 hover:text-grey-40",
+        "flex flex-col select-none inter-base-regular text-grey-50 cursor-pointer items-center justify-center w-full h-full rounded-rounded border-2 border-dashed border-grey-20 transition-colors hover:border-orange-60 hover:text-grey-40",
         className
       )}
     >

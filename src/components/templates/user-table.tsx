@@ -94,7 +94,7 @@ const UserTable: React.FC<UserTableProps> = ({
           <SidebarTeamMember user={user} />
         </Table.Cell>
         <Table.Cell className="w-80">{user.email}</Table.Cell>
-        <Table.Cell className="inter-small-semibold text-violet-60">
+        <Table.Cell className="inter-small-semibold text-orange-60">
           {user.role.charAt(0).toUpperCase()}
           {user.role.slice(1)}
         </Table.Cell>

@@ -106,7 +106,7 @@ const FilterDropdownItem = ({
           <div className="flex items-center">
             <div
               className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border rounded-base ${
-                open && "bg-violet-60"
+                open && "bg-orange-60"
               }`}
             >
               <span className="self-center">
@@ -132,7 +132,7 @@ const FilterDropdownItem = ({
             <div className="py-2 pl-6 flex">
               <button
                 onClick={handlePrev}
-                className="font-semibold hover:text-violet-60 text-grey-90"
+                className="font-semibold hover:text-orange-60 text-grey-90"
               >
                 Back
               </button>
@@ -177,7 +177,7 @@ const FilterDropdownItem = ({
                 >
                   <div
                     className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border mr-2 rounded-base ${
-                      checked[value] === true && "bg-violet-60"
+                      checked[value] === true && "bg-orange-60"
                     }`}
                   >
                     <span className="self-center">
@@ -202,7 +202,7 @@ const FilterDropdownItem = ({
             <div className="py-2 pl-6 flex">
               <button
                 onClick={handleNext}
-                className="font-semibold hover:text-violet-60 text-grey-90"
+                className="font-semibold hover:text-orange-60 text-grey-90"
               >
                 Show more
               </button>
@@ -518,13 +518,13 @@ const PopoverOptions = ({ options, onClick, selectedItem }) => {
             className={clsx(
               "rounded-full flex items-center justify-center mr-2 w-4 h-4",
               {
-                "border-2 border-violet-60": item === selectedItem,
+                "border-2 border-orange-60": item === selectedItem,
                 "border border-grey-30 ": item !== selectedItem,
               }
             )}
           >
             {item === selectedItem && (
-              <div className="rounded-full w-2 h-2 bg-violet-60" />
+              <div className="rounded-full w-2 h-2 bg-orange-60" />
             )}
           </div>
           {item}

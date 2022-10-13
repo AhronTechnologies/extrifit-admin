@@ -244,7 +244,7 @@ const Summary = () => {
               </span>
               <span
                 onClick={() => onDiscountRemove()}
-                className="inter-small-semibold text-violet-60 cursor-pointer"
+                className="inter-small-semibold text-orange-60 cursor-pointer"
               >
                 <CrossIcon size={20} />
               </span>
@@ -363,7 +363,7 @@ const SummarySection = ({ title, editIndex, children }) => {
         {title}
         <span
           onClick={() => setPage(editIndex)}
-          className="inter-small-semibold text-violet-60 cursor-pointer"
+          className="inter-small-semibold text-orange-60 cursor-pointer"
         >
           Edit
         </span>

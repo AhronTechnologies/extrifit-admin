@@ -57,7 +57,7 @@ const Sidebar: React.FC = () => {
             pageLink={"/a/discounts"}
             icon={<SaleIcon size={ICON_SIZE} />}
             triggerHandler={triggerHandler}
-            text={"Slevy"}
+            text={"Slevé kódy"}
           />
           <SidebarMenuItem
             pageLink={"/a/gift-cards"}

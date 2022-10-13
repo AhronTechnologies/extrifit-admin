@@ -51,7 +51,7 @@ const Billing = () => {
         >
           <div
             className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border rounded-base ${
-              sameAsShipping && "bg-violet-60"
+              sameAsShipping && "bg-orange-60"
             }`}
           >
             <span className="self-center">

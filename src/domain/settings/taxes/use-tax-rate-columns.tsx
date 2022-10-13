@@ -13,7 +13,7 @@ const useTaxRateColumns = () => {
           return (
             <Table.Cell
               key={index}
-              className="text-grey-90 group-hover:text-violet-60 pl-2"
+              className="text-grey-90 group-hover:text-orange-60 pl-2"
             >
               {row.original.type === "region" ? (
                 <div className="flex gap-x-xsmall text-grey-40 items-center">

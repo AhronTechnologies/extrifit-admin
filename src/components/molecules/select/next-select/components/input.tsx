@@ -25,7 +25,7 @@ const Input = <
             "input--is-disabled": props.isDisabled ? true : false,
           },
           clsx(
-            "inter-base-regular text-grey-90 caret-violet-60",
+            "inter-base-regular text-grey-90 caret-orange-60",
             inputClassName
           )
         )}

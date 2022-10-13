@@ -18,7 +18,7 @@ const Checkbox = React.forwardRef(
         <input
           type="checkbox"
           ref={checkboxRef}
-          className="form-checkbox w-[20px] h-[20px] rounded-base text-violet-60 focus:ring-0 mr-small border-grey-30"
+          className="form-checkbox w-[20px] h-[20px] rounded-base text-orange-60 focus:ring-0 mr-small border-grey-30"
           value={value}
           id={id}
           {...rest}

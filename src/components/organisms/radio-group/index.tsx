@@ -55,7 +55,7 @@ const Item = ({
           <RadioGroupPrimitive.Indicator
             className={clsx(
               "indicator flex items-center justify-center w-full h-full relative",
-              "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-violet-60 after:rounded-circle"
+              "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-orange-60 after:rounded-circle"
             )}
           />
           {/* Outline indicator: purely stylistical */}
@@ -63,7 +63,7 @@ const Item = ({
             //  we want to hide this indicator from screen readers because the previous one is enough
             aria-hidden="true"
             className={clsx(
-              "absolute inset-0 shadow-violet-60 shadow-[0_0_0_2px] rounded-rounded"
+              "absolute inset-0 shadow-orange-60 shadow-[0_0_0_2px] rounded-rounded"
             )}
           />
         </RadioGroupPrimitive.Item>
@@ -129,7 +129,7 @@ const SimpleItem: React.FC<RadioGroupSimpleItemProps> = ({
         <RadioGroupPrimitive.Indicator
           className={clsx(
             "flex items-center justify-center w-full h-full relative indicator",
-            "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-violet-60 after:rounded-circle"
+            "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-orange-60 after:rounded-circle"
           )}
         />
       </RadioGroupPrimitive.Item>
@@ -167,7 +167,7 @@ const Dot: React.FC<DotProps> = ({ className, ...rest }) => {
         <RadioGroupPrimitive.Indicator
           className={clsx(
             "flex items-center justify-center w-full h-full relative indicator",
-            "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-violet-60 after:rounded-circle"
+            "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-orange-60 after:rounded-circle"
           )}
         />
       </RadioGroupPrimitive.Item>

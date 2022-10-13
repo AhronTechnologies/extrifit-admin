@@ -47,7 +47,7 @@ function PriceInput(props: PriceInputProps) {
         placeholder={placeholder}
         decimalScale={decimal_digits}
         style={{ paddingRight: rightOffset }}
-        className="focus:bg-white focus:border-violet-6
+        className="focus:bg-white focus:border-orange-6
             border border-solid border-grey-20
             w-full h-[40px]
             py-[10px] pl-12

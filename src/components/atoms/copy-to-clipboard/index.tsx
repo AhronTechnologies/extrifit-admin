@@ -40,7 +40,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
         variant="ghost"
         size="small"
         className={clsx("p-0 text-grey-50", {
-          ["text-violet-60"]: isCopied,
+          ["text-orange-60"]: isCopied,
         })}
         onClick={handleCopy}
       >

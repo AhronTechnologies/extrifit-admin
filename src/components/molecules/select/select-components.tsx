@@ -142,7 +142,7 @@ const SelectContainer = <
   props: ContainerProps<Option, IsMulti, Group>
 ) => {
   return (
-    <div className="bg-grey-5 h-10 border border-grey-20 rounded-rounded focus-within:shadow-cta focus-within:border-violet-60 px-small">
+    <div className="bg-grey-5 h-10 border border-grey-20 rounded-rounded focus-within:shadow-cta focus-within:border-orange-60 px-small">
       <components.SelectContainer {...props} />
     </div>
   )
@@ -203,7 +203,7 @@ const CheckboxAdornment = ({ isSelected }: { isSelected: boolean }) => {
       className={clsx(
         `w-5 h-5 flex justify-center text-grey-0 border-grey-30 border rounded-base`,
         {
-          "bg-violet-60": isSelected,
+          "bg-orange-60": isSelected,
         }
       )}
     >
@@ -222,7 +222,7 @@ const RadioAdornment = ({ isSelected }: { isSelected: boolean }) => {
         "shrink-0 w-[20px] h-[20px] rounded-circle",
         {
           "shadow-[0_0_0_1px] shadow-[#D1D5DB]": !isSelected,
-          "shadow-[0_0_0_2px] shadow-violet-60": isSelected,
+          "shadow-[0_0_0_2px] shadow-orange-60": isSelected,
         }
       )}
     >
@@ -230,7 +230,7 @@ const RadioAdornment = ({ isSelected }: { isSelected: boolean }) => {
         <div
           className={clsx(
             "group flex items-center justify-center w-full h-full relative",
-            "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-violet-60 after:rounded-circle"
+            "after:absolute after:inset-0 after:m-auto after:block after:w-[12px] after:h-[12px] after:bg-orange-60 after:rounded-circle"
           )}
         />
       )}
